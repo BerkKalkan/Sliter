@@ -142,6 +142,7 @@ table {
     display: flex;
     gap: 64px;
     padding-top: 24px;
+    flex-direction: row-reverse;
 }
 
 .content-text {
@@ -299,10 +300,124 @@ table {
     }
 }
 
+.main-image {
+    margin-right: 24px;
+}
 
+.mobile-image {
+    display: none;
+}
 
-@media screen and (max-width: 376) {
+@media screen and (max-width: 376px) {
     .container {
+        width: 100vw;
+        height: 842px;
+        flex-direction: column;
+        border-radius: 0px;
         display: none;
+    }
+
+    .mobile-image {
+        display: block;
+    }
+
+    .main-image {
+        display: none;
+    }
+
+    .content-text {
+        width: 327px;
+        height: 478px;
+        margin-left: 33px;
+        margin-top: 0;
+
+        h1 {
+            width: 327px;
+            height: 40px;
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 40px;
+        }
+
+        p {
+            width: 327px;
+            height: 48px;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+        }
+
+        ul {
+            li {
+                width: 290px;
+                height: 48px;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 24px;
+
+            }
+        }
+
+        label {
+            width: 76px;
+            height: 18px;
+            font-size: 12px;
+            font-weight: 700;
+            line-height: 18px;
+        }
+
+        input {
+            width: 327px;
+            height: 48px;
+        }
+
+        button {
+            width: 327px;
+            height: 48px;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 24px;
+        }
+    }
+
+
+    .thx-modal {
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+        border-radius: 0px;
+
+        img {
+            width: 64px;
+            height: 64px;
+            margin-right: 250px;
+        }
+
+        h2 {
+            width: 327px;
+            height: 64px;
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 40px;
+
+        }
+
+        p {
+            width: 327px;
+            height: 64px;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+        }
+
+        button {
+            width: 327px;
+            height: 56px;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 24px;
+            position: absolute;
+            bottom: 24px;
+        }
     }
 }
